@@ -1,5 +1,5 @@
 {
-    "name": "react-upload",
+    "name": "react-project",
     "description": "文件上传以及断点续传",
     "version": "1.0.0",
     "main": "index.js",

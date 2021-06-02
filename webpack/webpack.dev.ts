@@ -1,7 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import merge from "webpack-merge";
-import common from "./webpack.common";
+import common from "./webpack";
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const config: webpack.Configuration = merge(common, {
     mode: "development",

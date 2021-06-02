@@ -2,7 +2,7 @@ import path from "path";
 import webpack from "webpack";
 import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
 import merge from "webpack-merge";
-import common from "./webpack.common";
+import common from "./webpack";
 
 const config: webpack.Configuration = merge(common, {
     mode: "production",
