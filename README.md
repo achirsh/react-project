@@ -2,6 +2,7 @@
 
 # 一、安装基础依赖
 
+```
 yarn add
 
 @types/html-webpack-plugin
@@ -33,6 +34,8 @@ webpack-dev-server               热更新
 webpack-merge
 webpack-bundle-analyzer
 --dev
+
+```
 
 线上环境最终需要的是html+js+css三种文件以及一个http服务
 
