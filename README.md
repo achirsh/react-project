@@ -42,15 +42,18 @@ webpack-bundle-analyzer
 
 # 二、新建tsconfig.json文件
 
+```
 npx typescript --init
 
 init typescript新建一个tsconfig.json文件，这个是ts主要依赖的东西
 
 "jsx": "react"
 "sourceMap": true
+```
 
 # 三、新建test命令(此处只是为了验证ts安装成功)
 
+```
 package.json 中scripts新建test
 "test":"tsc"，
 tsc是将ts生成js文件
@@ -62,10 +65,11 @@ const arr = [1,2,3]
 const arr2 = [...arr]
 
 运行yarn test，发现生成了test.js文件，证明ts安装成功
-
+```
 
 # 四、配置webpack
 
+```
 新建webpack.config.js
 const path = require('path');
 
@@ -85,10 +89,11 @@ package添加srcipt
 运行yarn webpack
 生成 dist/app.js
 运行 node ./dist/app.js，显示hello word
-
+```
 
 # 五、修改webpack.config.js
 
+```
 const path = require('path');
 
 module.exports = {
@@ -108,9 +113,11 @@ module.exports = {
 
 npm run webpack
 node ./dist/app.js
+```
 
 # 六、添加一个模板template.html
 
+```
 <html>
   <head>
     <meta charset="utf-8"/>
@@ -120,9 +127,11 @@ node ./dist/app.js
       <div id='root'/>
   </body>
 </html>
+```
 
 # 七、webpack.config添加插件plugin
 
+```
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -147,11 +156,11 @@ module.exports = {
         })
     ]
 };
-
-
+```
 
 # 八、webpack.config添加css配置
 
+```
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module: {
@@ -176,9 +185,11 @@ plugins: [
         filename: "app.css",
     }),
 ]
+```
 
 # 九、webpack.config添加less配置
 
+```
 module: {
     rules: [
         ...
@@ -198,10 +209,11 @@ module: {
         },
     ]
 }
-
+```
 
 # 十、webpack.config添加scss配置
 
+```
 module: {
     rules: [
         ...
@@ -218,9 +230,11 @@ module: {
         },
     ]
 }
+```
 
 # 十一、webpack.config添加ts-import-plugin配置
 
+```
 const tsImportPluginFactory = require("ts-import-plugin");
 
 mode: 'development',
@@ -237,10 +251,12 @@ options: {
     compilerOptions: {
         module: "es2015",
     },
-},
+}
+```
 
 # 十二、webpack.config添加热更新配置
 
+```
 package.json修改  "start":"webpack-dev-server"
 
 devServer: {
@@ -248,22 +264,27 @@ devServer: {
     // host填写为0000是因为可能有remote开发的情况，0000不能访问就改成localhost
     host: "0.0.0.0",
 }
+```
 
 # 三十三、添加插件的types、添加ts运行时、新建webpack.config.ts
 
+```
 package.json修改
 "start":"webpack-dev-server --config webpack.config.ts"
+```
 
 # 十四、webpack.config添加map配置
 
+```
 ...
     mode: 'development',
     devtool: "inline-source-map",
 ...
-
+```
 
 # 十五、webpack.config添加error-overlay-webpack-plugin配置
 
+```
 ...
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 ...
@@ -282,4 +303,5 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
         new ErrorOverlayPlugin()
     ],
 ...
+```
 
