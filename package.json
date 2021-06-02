@@ -1,0 +1,54 @@
+{
+    "name": "react-upload",
+    "description": "文件上传以及断点续传",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/html-webpack-plugin": "^3.2.5",
+        "@types/mini-css-extract-plugin": "^1.4.3",
+        "@types/react": "^17.0.9",
+        "@types/react-dom": "^17.0.6",
+        "@types/webpack-bundle-analyzer": "^4.4.0",
+        "@types/webpack-dev-server": "^3.11.4",
+        "@types/webpack-merge": "^5.0.0",
+        "antd": "^4.16.1",
+        "css-loader": "^5.2.6",
+        "error-overlay-webpack-plugin": "^0.4.2",
+        "html-webpack-plugin": "^5.3.1",
+        "less": "2.7.3",
+        "less-loader": "^9.0.0",
+        "mini-css-extract-plugin": "^1.6.0",
+        "node-sass": "^6.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "sass-loader": "^12.0.0",
+        "ts-import-plugin": "^1.6.7",
+        "ts-loader": "^9.2.2",
+        "ts-node": "^10.0.0",
+        "tslint": "^6.1.3",
+        "typescript": "^4.3.2",
+        "webpack": "^5.38.1",
+        "webpack-bundle-analyzer": "^4.4.2",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.7.3"
+    },
+    "scripts": {
+        "test": "tsc",
+        "webpack": "webpack",
+        "start": "webpack-dev-server --config webpack/webpack.dev.ts",
+        "build": "webpack --config webpack/webpack.prod.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/achirsh/react-upload.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/achirsh/react-upload/issues"
+    },
+    "homepage": "https://github.com/achirsh/react-upload#readme"
+}
